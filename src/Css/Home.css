@@ -1,0 +1,9 @@
+.landing{
+    max-width: 500px;
+    margin: 80px auto;
+    text-align: center;
+}
+.header1 h1{
+    font-weight: 600;
+    font-size: 21px;
+}

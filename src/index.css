@@ -1,0 +1,120 @@
+@font-face {
+  font-family: 'FONT';
+  src: url('./Css/Font/Quicksand-VariableFont_wght.ttf') format('truetype');
+}
+
+body {
+  margin: 0;
+  font-family: FONT,-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  max-width: 1440px;
+  font-size: 14px;
+  color: var(--defaultColor);
+  width: 100%;
+  font-weight: 500;
+  margin: 0 auto !important;
+}
+:root{
+  --defaultColor: #19110b;
+  --mainBg: #f6f5f3;
+  --bg: rgb(226,224,223);
+  --border: 1px solid #EAE8E4;
+  --white: #fff;
+  --otherBorder: 1px solid #191101;
+  --cartBg: #F6F5F3;
+}
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+img{
+  max-width: 100%;
+}
+a{
+  text-decoration: none !important;
+  color: inherit !important;
+}
+.font_12{
+  font-size: 12px;
+}
+.font_14{
+  font-size: 14px !important;
+}
+.font_17{
+  font-size: 17px;
+}
+.centerY{
+  display: flex;
+}
+.centerY *{
+  margin: auto 0;
+  
+}
+.standardWidth{
+  padding: 0 20px;
+}
+.pointer{
+  cursor: pointer;
+}
+.borderNone{
+  border: none !important;
+}
+.relative{
+  position: relative;
+}
+.twoEquo{
+  display: flex;
+  justify-content: space-between;
+}
+.divideByTwo{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.divideByTwoWithGap{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+button{
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+.img{
+    max-width: 100%;
+    object-fit: cover;
+    object-position: center;
+    height: 100%;
+}
+.d_none{
+  display: none !important;
+}
+.pl_1{
+  padding-left: 10px;
+}
+.heightRow{
+  height: 100vh;
+  overflow-y: auto;
+}
+
+ul {
+  padding-left: 1rem;
+}
+.sticky-bottom{
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  padding: 40px 0;
+}
+
+
+
+
+
+
+
+
+
