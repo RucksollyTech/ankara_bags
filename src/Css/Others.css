@@ -14,7 +14,7 @@
 }
 .Logo{
     font-size: 30px;
-    font-weight: 800;
+    font-weight: 500;
 }
 .logoContainer span,
 .logoContainer a{
@@ -38,6 +38,43 @@
     font-weight: 550;
     margin-bottom: 4px;
 }
+.searchBg{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-bottom: var(--border);
+    background-color: var(--white);
+}
+.searchInputContainer{
+    max-width: 500px;
+    width: 100%;
+    margin: 20px auto;
+    background-color: #F6F5F3;
+    padding: 10px ;
+    display: flex;
+}
+.searchInputContainer input{
+    width: 100%;
+    padding: 0 10px;
+    border: none;
+    outline: none;
+    font-size: 14px;
+    font-weight: 500;
+    background-color: transparent;
+}
+.cancelSearch{
+    position: absolute;
+    top: 30px;
+    right: 40px;
+}
+
+
+
+
+
+
 
 /* Footer */
 .Footer{
@@ -375,11 +412,64 @@
     cursor: pointer;
 }
 
+.breadCrumbsMenu{
+    background: var(--white);
+    width: 350px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: -350px;
+    overflow-y: auto;
+    transition: all 0.5s ease;
+    z-index: 10000;
+}
+
+.breadCrumbsMenu.display{
+    left: 0;
+    transition: all 0.5s ease;
+}
+.breadCrumbsContainer{
+    padding: 50px 30px;
+}
+.overflowy{
+    overflow-y: auto;
+}
+.breadCrumbsMenu .overflowy{
+    padding: 0 40px 40px 40px;
+}
+
+.d_none,.d_none1{
+    opacity: 0;
+}
+.overflowy a:hover img.d_none{
+    opacity: 1;
+    transition: opacity .5s .1s!important;
+}
+.overflowy a:hover img.d_none1{
+    opacity: 1;
+    transition: opacity .5s .2s !important;
+}
+.boxBreadCrumbs{
+    padding: 40px 40px 10px 40px;
+}
 
 
 
+.breadCrumbsMenu a{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+}
 
-
+.breadCrumbsMenu a span{
+    display: inline-block;
+    margin-right : 50px;
+}
+.breadCrumbsMenu a:hover span{
+    border-bottom: solid 1px var(--default-color);
+    margin-right: 55px;
+    transition: margin-right .5s;
+}
 
 
 

@@ -2,6 +2,10 @@
   font-family: 'FONT';
   src: url('./Css/Font/Quicksand-VariableFont_wght.ttf') format('truetype');
 }
+@font-face {
+  font-family: 'FONT2';
+  src: url('./Css/Font/Ubuntu-Medium.ttf') format('truetype');
+}
 
 body {
   margin: 0;
@@ -29,6 +33,9 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+.font2{
+  font-family: FONT2;
 }
 img{
   max-width: 100%;

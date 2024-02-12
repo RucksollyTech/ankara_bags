@@ -6,6 +6,7 @@ import Footer from "./Components/Footer";
 import BagDetails from "./BagDetails";
 import Cart from "./Cart";
 import Wishlist from "./Wishlist";
+import AllBags from "./AllBags";
 
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
                     <Route path="/product/details" element={<BagDetails />} />
                     <Route path="/products/cart" element={<Cart />} />
                     <Route path="/wish/list" element={<Wishlist />} />
+                    <Route path="/bags/list" element={<AllBags />} />
                 </Routes>
                 <Footer />
             </Router>
