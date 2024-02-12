@@ -28,14 +28,14 @@ const NavBar = () => {
                     Search
                 </span>
             </div>
-            <div className='Logo'>
+            <Link to={"/"} className='Logo'>
                 KRYSPATRA
-            </div>
+            </Link>
             <div className='logoContainer centerY'>
                 <Link to={"/"}>
                     Call Us
                 </Link>
-                <Link to={"/"}>
+                <Link to={"/wish/list"}>
                     Wishlist
                 </Link>
                 <Link to={"/"}>

@@ -5,6 +5,7 @@ import ScrollToTop from "./Components/ScrollToTop";
 import Footer from "./Components/Footer";
 import BagDetails from "./BagDetails";
 import Cart from "./Cart";
+import Wishlist from "./Wishlist";
 
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
                     <Route path="/" element={<Home />} />
                     <Route path="/product/details" element={<BagDetails />} />
                     <Route path="/products/cart" element={<Cart />} />
+                    <Route path="/wish/list" element={<Wishlist />} />
                 </Routes>
                 <Footer />
             </Router>

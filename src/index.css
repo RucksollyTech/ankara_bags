@@ -46,6 +46,9 @@ a{
 .font_17{
   font-size: 17px;
 }
+.font_20{
+  font-size: 20px;
+}
 .centerY{
   display: flex;
 }
@@ -53,6 +56,13 @@ a{
   margin: auto 0;
   
 }
+.centerX{
+  display: flex;
+}
+.centerX img{
+  margin: 0 auto ;
+}
+
 .standardWidth{
   padding: 0 20px;
 }
@@ -104,13 +114,10 @@ ul {
   padding-left: 1rem;
 }
 .sticky-bottom{
-  position: fixed;
+  position: absolute;
   bottom: 0;
-  width: 100%;
-  padding: 40px 0;
+  max-width: 100%;
 }
-
-
 
 
 

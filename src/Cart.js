@@ -1,12 +1,16 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
+import ZoomModal from './Components/ZoomModal'
 
 const Cart = () => {
     const [showSideBarTwo, setShowSideBarTwo] = useState(false)
-    const togglerSideBar = () => {
-        setShowSideBarTwo(!showSideBarTwo)
+    const [show, setShow] = useState(false)
+    const [zoom, setZoom] = useState(false)
+    const togglerSideBar = () => setShowSideBarTwo(!showSideBarTwo)
+    const zoomer = (data) => {
+        setShow(true)
+        setZoom(data)
     }
-
     
     return (
         <div className='cart'>
@@ -24,8 +28,9 @@ const Cart = () => {
                 </div>
                 <div className='cartDetailsContainer'>
                     <div className='shopLeft'>
-                        <div className='theContent img'>
+                        <div className='theContent img relative' onClick={()=>zoomer(["/Images/bag.avif","/Images/bag2.avif"])}>
                             <img src="/Images/bag.avif" alt="bag" />
+                            <img className='zoomIcon' width="20" height="20" src="https://img.icons8.com/external-icongeek26-outline-icongeek26/20/external-zoom-in-graphic-design-icongeek26-outline-icongeek26.png" alt="external-zoom-in-graphic-design-icongeek26-outline-icongeek26"/>
                         </div>
                     </div>
                     <div className='border_left'>
@@ -89,8 +94,9 @@ const Cart = () => {
                 </div>
                 <div className='cartDetailsContainer'>
                     <div className='shopLeft'>
-                        <div className='theContent img'>
+                        <div className='theContent img relative' onClick={()=>zoomer(["/Images/bag.avif","/Images/bag2.avif"])}>
                             <img src="/Images/bag.avif" alt="bag" />
+                            <img className='zoomIcon' width="20" height="20" src="https://img.icons8.com/external-icongeek26-outline-icongeek26/20/external-zoom-in-graphic-design-icongeek26-outline-icongeek26.png" alt="external-zoom-in-graphic-design-icongeek26-outline-icongeek26"/>
                         </div>
                     </div>
                     <div className='border_left'>
@@ -252,6 +258,7 @@ const Cart = () => {
                     </div>
                 </div>
             </div>
+            <ZoomModal show={show} setShow={setShow} zoom={zoom} />
         </div>
     )
 }

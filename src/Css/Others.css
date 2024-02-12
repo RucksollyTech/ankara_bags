@@ -86,13 +86,15 @@
 }
 /* Hide scrollbar for Chrome, Safari and Opera */
 .scrollTip::-webkit-scrollbar ,
-.heightRow.xm::-webkit-scrollbar {
+.heightRow.xm::-webkit-scrollbar, 
+.centerX.dag::-webkit-scrollbar {
     display: none;
 }
   
 /* Hide scrollbar for IE, Edge and Firefox */
 .scrollTip,
-.heightRow.xm{
+.heightRow.xm,
+.centerX.dag{
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;  /* Firefox */
 }
@@ -279,10 +281,93 @@
     padding: 5px 0;
 }
 
-.sticky-bottom{
+/* .sticky-bottom{
     max-width: 410px;
     width: 100%;
+} */
+.zoomIcon{
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    cursor: pointer;
+    z-index: 10;
 }
+.flexZoomBtn{
+    display: flex;
+    position: relative;
+    z-index: 10000;
+}
+.flexZoomBtn img{
+    margin-left: auto;
+}
+
+.theFlash{
+    position: absolute;
+    width: 98%;
+    z-index: 100;
+}
+.centerX.dag{
+    height: 100vh;
+    overflow: auto;
+}
+.wishList{
+    background: var(--cartBg);
+    padding: 40px 20px;
+}
+.wishListContainer{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    max-width: 1000px;
+    width: 100%;
+    margin: 0 auto;
+}
+.bagWords.bg-white{
+    padding: 10px;
+    border-radius: 10px;
+}
+.productDetailContainer .sticky-bottom{
+    width: 100%;
+    padding: 40px 0;
+}
+  
+.wishListDetailDisplay{
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: #fff;
+    padding: 20px;
+    display: none;
+}
+.sticky-bottom.xd{
+    max-width: 100%;
+    width: 100%;
+}
+.mr-1{
+    margin-right: 10px;
+}
+.ml-1{
+    margin-left: 10px;
+}
+/* .active.theContent .wishListDetailDisplay{
+    display: block;
+} */
+img.active + .wishListDetailDisplay {
+    display: block !important;
+}
+.wishLismtDetailDisplay + .bagWords.active {
+    display: block !important;
+}
+
+
+
+
+
+
+
+
+
 
 
 
