@@ -48,7 +48,7 @@ const Cart = () => {
                     <div className='border_left'>
                         <div className='border_bottom padderCart lilSmImgContainer'>
                             <div className='lilSmImg relative' onClick={()=>zoomer(["/Images/bag.avif","/Images/bag2.avif"])}>
-                                <img className='' src="/Images/bag.avif" alt="bag" />
+                                <img src="/Images/bag.avif" alt="bag" />
                                 <img className='zoomIcon' width="20" height="20" src="https://img.icons8.com/external-icongeek26-outline-icongeek26/20/external-zoom-in-graphic-design-icongeek26-outline-icongeek26.png" alt="external-zoom-in-graphic-design-icongeek26-outline-icongeek26"/>
                             </div>
                             <div className='pdSmSc'>
@@ -171,7 +171,7 @@ const Cart = () => {
                     <div className='heightRow xm'>
                         <div className='cartViews py-4 border-bottom'>
                             <div className="theContent">
-                                <img className='img' src="/Images/bag.avif" alt="Bag" />
+                                <img src="/Images/bag.avif" alt="Bag" />
                             </div>
                             <div className="bagWords p-3">
                                 <div className='font_14'>
