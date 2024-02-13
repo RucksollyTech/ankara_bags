@@ -50,7 +50,6 @@
 }
 .searchInputContainer{
     max-width: 500px;
-    width: 100%;
     margin: 20px auto;
     background-color: #F6F5F3;
     padding: 10px ;
@@ -103,7 +102,6 @@
 }
 .Copyright .standardWidth{
     font-size: 13px;
-    /* border-top: var(--border); */
     padding: 20px 0;
     max-width: 1200px;
     margin: 0 auto;

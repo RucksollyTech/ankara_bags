@@ -15,14 +15,14 @@ function App() {
             <Router>
 				<ScrollToTop />
 				<NavBar />
-				{/* <Routes>
+				<Routes>
                     <Route path="/" element={<Home />} />
                     <Route path="/product/details" element={<BagDetails />} />
                     <Route path="/products/cart" element={<Cart />} />
                     <Route path="/wish/list" element={<Wishlist />} />
                     <Route path="/bags/list" element={<AllBags />} />
                 </Routes>
-                <Footer /> */}
+                <Footer />
             </Router>
         </div>
     );

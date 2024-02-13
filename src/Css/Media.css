@@ -1,3 +1,18 @@
+
+@media (max-width: 1270px) {
+    .Copyright .standardWidth{
+        padding: 20px;
+    }
+}
+@media (max-width: 1023px) {
+    .bagListContainer{
+        grid-template-columns:  1fr 1fr ;
+    }
+    .Footer{
+        grid-template-columns:  1fr 1fr ;
+        gap: 40px;
+    }
+}
 @media (max-width: 767px) {
     .logoContainer a,
     .logoContainer span.pointer{
@@ -6,15 +21,34 @@
     .Logo{
         font-size: 25px;
     }
+    .cancelSearch{
+        top: 30px;
+        right: 20px;
+    }
 }
 
 @media (max-width:600px) {
+    .cancelSearch{
+        right: 15px;
+    }
     .navBar{
-        padding: 10px 20px;
+        padding: 10px 15px;
+    }
+    .searchInputContainer{
+        margin: 10px 35px 0 15px;
+        padding: 5px 0 ;
+    }
+    .cancelSearch{
+        top: 16px;
+        right: 10px;
     }
     .Logo{
         font-size: 20px;
         letter-spacing: 2.5px;
+    }
+    .Footer{
+        grid-template-columns:  1fr ;
+        gap: 40px;
     }
 }
 
@@ -28,6 +62,13 @@
 
 
 @media (max-width: 425px) {
+    .landing{
+        margin: 50px auto;
+    }
+    .searchInputContainer{
+        margin: 10px 35px 0 10px;
+        padding: 5px 0 ;
+    }
     .breadCrumbsMenu .overflowy{
         padding: 0 0 0 20px;
     }
@@ -36,5 +77,14 @@
     }
     .Logo{
         font-size: 19px;
+    }
+    .theContent{
+        padding: 10px;
+    }
+    .standardWidth{
+        padding: 0 15px ;
+    }
+    .Copyright .standardWidth{
+        padding: 15px ;
     }
 }
