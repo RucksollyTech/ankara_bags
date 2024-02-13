@@ -12,6 +12,20 @@
         grid-template-columns:  1fr 1fr ;
         gap: 40px;
     }
+    .bagDetailViewContainer{
+        grid-template-columns:  1fr ;
+    }
+    .bagDetailsContent{
+        max-width: 100%;
+        margin-top: 36px;
+        margin-bottom: 36px;
+    }
+    .detailsCarouselSm{
+        display: block;
+    }
+    .detailsCarouselLg{
+        display: none;
+    }
 }
 @media (max-width: 767px) {
     .logoContainer a,
@@ -24,6 +38,15 @@
     .cancelSearch{
         top: 30px;
         right: 20px;
+    }
+    .flexZoomBtn.p-3{
+        padding: 10px !important;
+    }
+    .ZOOM{
+        padding: 0 !important;
+    }
+    .flexZoomBtn .mx-4{
+        margin: 0 10px !important;
     }
 }
 
@@ -52,16 +75,10 @@
     }
 }
 
-
-
-
-
-
-
-
-
-
 @media (max-width: 425px) {
+    .leftAutoBeen{
+        padding: 80px 15px 25px 15px;
+    }
     .landing{
         margin: 50px auto;
     }

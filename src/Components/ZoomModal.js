@@ -15,15 +15,27 @@ const ZoomModal = ({setShow,zoom,...props}) => {
         if (zoomBerg > 1 && val === "out") setZoomBerg(zoomBerg - 0.2)
         if (val === "reset") setZoomBerg(1)
     }
-    
+    const adjustScreenSize = () => {
+        let screenScale = false
+        if(window.innerWidth < 767){
+            screenScale = true
+        }
+        return [screenScale]
+    }
+    const [Scale] = adjustScreenSize()
     const Controls = () => {
         return (
             <div className="flexZoomBtn p-3">
-                <div><button onClick={()=>zoomControl("in")} className="btn btn-sm btn-primary">Zoom In</button>
+                <div>
+                    <button onClick={()=>zoomControl("in")} className="btn btn-sm btn-primary">Zoom In</button>
                 </div>
-                <div><button onClick={()=>zoomControl("out")} className="btn btn-sm btn-secondary mx-4">Zoom Out</button></div>
-                <div><button onClick={()=>zoomControl("reset")} className="btn btn-sm btn-danger">Reset</button></div>
-                <img className='pointer' onClick={()=>setShow(false)} width="40" height="40" src="https://img.icons8.com/ios/40/cancel.png" alt="cancel"/>
+                <div>
+                    <button onClick={()=>zoomControl("out")} className="btn btn-sm btn-secondary mx-4">Zoom Out</button>
+                </div>
+                <div>
+                    <button onClick={()=>zoomControl("reset")} className="btn btn-sm btn-danger">Reset</button>
+                </div>
+                <img className='pointer' onClick={()=>setShow(false)} width={Scale ? "25" : "40"} height={Scale ? "25" : "40"} src={`https://img.icons8.com/ios/${Scale ? 25 : 40}/cancel.png`} alt="cancel"/>
             </div>
         );
     };
@@ -43,13 +55,13 @@ const ZoomModal = ({setShow,zoom,...props}) => {
     },[show])
     return zoom && 
         <Modal fullscreen={true} onHide={() => setShow(false)} {...props}>
-            <Modal.Body>
+            <Modal.Body className='ZOOM'>
                 <Controls />
                 <motion.div ref={constraintsRef}>
                     <div className={`alert alert-primary text-center font_17 theFlash ${flash ? "" : "d_none"}`}>
                         Click to zoom
                     </div>
-                    <Carousel activeIndex={index} onSelect={handleSelect}>
+                    <Carousel interval={null} activeIndex={index} onSelect={handleSelect}>
                         {zoom && zoom.map((i,x)=>(
                             <Carousel.Item key={x}>
                                 <motion.div 

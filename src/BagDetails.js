@@ -4,6 +4,8 @@ import { ADJUST_HEIGHT_FAIL } from './Components/Constants'
 import { hightAddAction } from './Components/Action'
 import { useNavigate } from 'react-router-dom'
 import Accordion from 'react-bootstrap/Accordion';
+import Carousel from 'react-bootstrap/Carousel'
+import ZoomModal from './Components/ZoomModal'
 
 const BagDetails = () => {
     const dispatch = useDispatch()
@@ -11,6 +13,18 @@ const BagDetails = () => {
     const [showSideBar, setShowSideBar] = useState(false)
     const [showSideBarTwo, setShowSideBarTwo] = useState(false)
     const [theHeight, setTheHeight] = useState(false)
+    const [show, setShow] = useState(false)
+    const [zoom, setZoom] = useState(false)
+    const [index, setIndex] = useState(0);
+    const handleSelect = (selectedIndex) => {
+        setIndex(selectedIndex);
+    };
+    const dataTest = ["/Images/bag.avif","/Images/bag2.avif"]
+    const zoomer = (data) => {
+        setShow(true)
+        let selectedImg = dataTest.filter(i => i !== data)
+        setZoom([data, ...selectedImg])
+    }
     const checkScroll = (e) => {
         setTheHeight(e.target.scrollTop)
         localStorage.setItem(`hightItems`, JSON.stringify(e.target.scrollTop))
@@ -35,11 +49,37 @@ const BagDetails = () => {
     },[])
     return (
         <div className='bagDetailViewContainer'>
-            <div className="scrollTip relative" onScroll={checkScroll}>
+            <div className="scrollTip relative detailsCarouselLg" onScroll={checkScroll}>
                 <div className="absoluteScroll">
-                    <img src="/Images/bag2.avif" alt="Bag" />
-                    <img src="/Images/bag.avif" alt="Bag" />
+                    <div onClick={()=>zoomer("/Images/bag2.avif")}>
+                        <img src="/Images/bag2.avif" alt="Bag" onClick={()=>zoomer("/Images/bag2.avif")} />
+                    </div>
+                    <div onClick={()=>zoomer("/Images/bag.avif")}>
+                        <img src="/Images/bag.avif" alt="Bag" onClick={()=>zoomer("/Images/bag.avif")} />
+                    </div>
+                    {/* <img src="/Images/bag2.avif" alt="Bag" onClick={()=>zoomer("/Images/bag2.avif")} /> */}
+                    {/* <img src="/Images/bag.avif" alt="Bag" onClick={()=>zoomer("/Images/bag.avif")} /> */}
                 </div>
+            </div>
+            <div className='detailsCarouselSm'>
+                <Carousel 
+                    activeIndex={index} 
+                    onSelect={handleSelect}
+                    controls = {false}
+                    indicators = {false}
+                    interval={null}
+                >
+                    <Carousel.Item>
+                        <div onClick={()=>zoomer("/Images/bag2.avif")}>
+                            <img src="/Images/bag2.avif" alt="Bag" onClick={()=>zoomer("/Images/bag2.avif")} />
+                        </div>
+                    </Carousel.Item>
+                    <Carousel.Item>
+                        <div onClick={()=>zoomer("/Images/bag.avif")}>
+                            <img src="/Images/bag.avif" alt="Bag" onClick={()=>zoomer("/Images/bag.avif")} />
+                        </div>
+                    </Carousel.Item>
+                </Carousel>
             </div>
             <div className='bagDetails'>
                 <div className="bagDetailsContent">
@@ -183,6 +223,7 @@ const BagDetails = () => {
                     </div>
                 </div>
             </div>
+            <ZoomModal show={show} setShow={setShow} zoom={zoom} />
         </div>
     )
 }
