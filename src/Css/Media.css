@@ -87,6 +87,7 @@
         width: 300px;
         right: -300px;
     }
+    
     .divideByTwoWithGap{
         grid-template-columns: 1fr;
       }
@@ -98,6 +99,13 @@
     }
     .navBar{
         padding: 10px 15px;
+    }
+    .autos .twoEquo.pt-4.bg-white,
+    .autos .pt-4.sticky-top{
+        padding-top: 0 !important;
+    }
+    .productDetailContainer{
+        padding: 65px 20px 0 20px;
     }
     .searchInputContainer{
         margin: 10px 35px 0 15px;
