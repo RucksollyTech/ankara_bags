@@ -14,7 +14,8 @@
 }
 .Logo{
     font-size: 30px;
-    font-weight: 500;
+    font-weight: 450;
+    letter-spacing: 2.5px;
 }
 .logoContainer span,
 .logoContainer a{

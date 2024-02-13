@@ -2,9 +2,13 @@
   font-family: 'FONT';
   src: url('./Css/Font/Quicksand-VariableFont_wght.ttf') format('truetype');
 }
-@font-face {
+/* @font-face {
   font-family: 'FONT2';
   src: url('./Css/Font/Ubuntu-Medium.ttf') format('truetype');
+} */
+@font-face {
+  font-family: 'FONT2';
+  src: url('./Css/Font/Oswald-VariableFont_wght.ttf') format('truetype');
 }
 
 body {
