@@ -471,8 +471,9 @@
     margin-right: 55px;
     transition: margin-right .5s;
 }
-
-
+.lilSmImg{
+    display: none;
+}
 
 
 

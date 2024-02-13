@@ -4,7 +4,15 @@
         padding: 20px;
     }
 }
-@media (max-width: 1023px) {
+@media (max-width: 1137px) {
+    .cartContent{
+        padding: 30px;
+    }
+}
+@media (max-width: 1028px) {
+    .cart{
+        grid-template-columns:  1fr ;
+    }
     .bagListContainer{
         grid-template-columns:  1fr 1fr ;
     }
@@ -28,6 +36,12 @@
     }
 }
 @media (max-width: 767px) {
+    .cartContent{
+        padding: 30px 15px;
+    }
+    .rightSideContents{
+        padding:30px 15px;
+    }
     .logoContainer a,
     .logoContainer span.pointer{
         display: none;
@@ -48,6 +62,34 @@
     .flexZoomBtn .mx-4{
         margin: 0 10px !important;
     }
+    .shopLeft{
+        display: none;
+    }
+    .lilSmImgContainer{
+        display: flex;
+    }
+    .lilSmImg{
+        display: block;
+        max-width: 150px;
+        width: 100%;
+        background-image: linear-gradient(to right bottom, var(--bg), var(--mainBg));
+    }
+    .cartDetailsContainer{
+        grid-template-columns: 1fr;
+    }
+    .pdSmSc{
+        padding-left: 20px;
+    }
+    .heightManager{
+        height: auto;
+    }
+    .productDetailContainer{
+        width: 300px;
+        right: -300px;
+    }
+    .divideByTwoWithGap{
+        grid-template-columns: 1fr;
+      }
 }
 
 @media (max-width:600px) {
@@ -73,9 +115,26 @@
         grid-template-columns:  1fr ;
         gap: 40px;
     }
+    .header2{
+        font-size: 20px;
+    }
 }
 
 @media (max-width: 425px) {
+    
+    .divideByTwo .text-center{
+        padding: 12px 0;
+        text-align: center;
+    }
+    .pdSmSc{
+        padding-left: 15px;
+    }
+    .lilSmImg{
+        max-width: 100px;
+    }
+    .padderCart{
+        padding: 10px;
+    }
     .leftAutoBeen{
         padding: 80px 15px 25px 15px;
     }
