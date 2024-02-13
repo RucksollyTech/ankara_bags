@@ -34,6 +34,10 @@
     .detailsCarouselLg{
         display: none;
     }
+    .wishListContainer{
+        grid-template-columns: 1fr 1fr;
+        
+    }
 }
 @media (max-width: 767px) {
     .cartContent{
@@ -90,10 +94,20 @@
     
     .divideByTwoWithGap{
         grid-template-columns: 1fr;
-      }
+    }
+    .wishListContainer{
+        grid-template-columns: 1fr;
+    }
 }
 
 @media (max-width:600px) {
+    .questionModal{
+        padding: 30px;
+    }
+    .cancelWishList2{
+        top: 15px;
+        right: 15px;
+    }
     .cancelSearch{
         right: 15px;
     }
@@ -129,7 +143,9 @@
 }
 
 @media (max-width: 425px) {
-    
+    .wishList{
+        padding: 40px 15px;
+    }
     .divideByTwo .text-center{
         padding: 12px 0;
         text-align: center;
