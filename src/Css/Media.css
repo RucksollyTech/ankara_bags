@@ -1,5 +1,40 @@
+@media (max-width: 767px) {
+    .logoContainer a,
+    .logoContainer span.pointer{
+        display: none;
+    }
+    .Logo{
+        font-size: 25px;
+    }
+}
+
+@media (max-width:600px) {
+    .navBar{
+        padding: 10px 20px;
+    }
+    .Logo{
+        font-size: 20px;
+        letter-spacing: 2.5px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
 @media (max-width: 425px) {
     .breadCrumbsMenu .overflowy{
         padding: 0 0 0 20px;
+    }
+    .boxBreadCrumbs{
+        padding: 20px 0 10px 15px;
+    }
+    .Logo{
+        font-size: 19px;
     }
 }
